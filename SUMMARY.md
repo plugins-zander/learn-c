@@ -45,6 +45,7 @@
     * [自定义类型](books/1027.md)
         * [使用](books/1093.md)
         * [区别](books/1094.md)
+    * [类型转换](books/1124.md)
 * [输入输出](books/1028.md)
     * [数据输入输出](books/1029.md)
     * [文件输入输出](books/1030.md)
@@ -89,5 +90,5 @@
     * [错误处理](books/1099.md)
     * [内存管理](books/1100.md)
 * [应用](books/1038.md)
-* [end](books/1124.md)
+* [end](books/1125.md)
 
