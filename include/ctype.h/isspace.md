@@ -1,0 +1,2 @@
+# int isspace(int c)
+

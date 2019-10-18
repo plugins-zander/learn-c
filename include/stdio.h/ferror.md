@@ -1,0 +1,2 @@
+# int ferror(FILE *stream)
+

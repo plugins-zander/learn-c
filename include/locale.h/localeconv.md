@@ -1,0 +1,2 @@
+# struct lconv *localeconv(void)
+

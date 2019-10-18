@@ -1,0 +1,2 @@
+# void rewind(FILE *stream)
+

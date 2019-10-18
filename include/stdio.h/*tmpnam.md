@@ -1,0 +1,2 @@
+# char tmpnam(char str)
+

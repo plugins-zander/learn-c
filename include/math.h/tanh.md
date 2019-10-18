@@ -1,0 +1,2 @@
+# double tanh(double x)
+

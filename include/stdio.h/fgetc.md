@@ -1,0 +1,2 @@
+# int fgetc(FILE *stream)
+

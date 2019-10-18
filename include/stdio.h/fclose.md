@@ -1,0 +1,2 @@
+# int fclose(FILE *stream)
+

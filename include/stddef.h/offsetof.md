@@ -1,0 +1,2 @@
+# offsetof(type, member-designator)
+

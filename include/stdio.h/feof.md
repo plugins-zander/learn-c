@@ -1,0 +1,2 @@
+# int feof(FILE *stream)
+

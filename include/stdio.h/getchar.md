@@ -1,0 +1,2 @@
+# int getchar(void)
+

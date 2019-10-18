@@ -1,0 +1,2 @@
+# double cos(double x)
+

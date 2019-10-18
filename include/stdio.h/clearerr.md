@@ -1,0 +1,2 @@
+# void clearerr(FILE *stream)
+
