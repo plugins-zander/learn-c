@@ -25,8 +25,8 @@
 
 | 序号 | 函数 & 描述                                                  |
 | ---- | ------------------------------------------------------------ |
-| 1    | [char *setlocale(int category, const char *locale)](https://www.runoob.com/cprogramming/c-function-setlocale.html) 设置或读取地域化信息。 |
-| 2    | [struct lconv *localeconv(void)](https://www.runoob.com/cprogramming/c-function-localeconv.html) 设置或读取地域化信息。 |
+| 1    | [char *setlocale(int category, const char *locale)](setlocale.html) 设置或读取地域化信息。 |
+| 2    | [struct lconv *localeconv(void)](localeconv.html) 设置或读取地域化信息。 |
 
 ## 库结构
 

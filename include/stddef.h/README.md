@@ -22,5 +22,5 @@
 
 | 序号 | 宏 & 描述                                                    |
 | ---- | ------------------------------------------------------------ |
-| 1    | [NULL](https://www.runoob.com/cprogramming/c-macro-null.html) 这个宏是一个空指针常量的值。 |
-| 2    | [offsetof(type, member-designator)](https://www.runoob.com/cprogramming/c-macro-offsetof.html) 这会生成一个类型为 size_t 的整型常量，它是一个结构成员相对于结构开头的字节偏移量。成员是由 *member-designator*给定的，结构的名称是在 *type* 中给定的。 |
+| 1    | [NULL](NULL.html) 这个宏是一个空指针常量的值。 |
+| 2    | [offsetof(type, member-designator)](offsetof.html) 这会生成一个类型为 size_t 的整型常量，它是一个结构成员相对于结构开头的字节偏移量。成员是由 *member-designator*给定的，结构的名称是在 *type* 中给定的。 |

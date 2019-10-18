@@ -20,7 +20,7 @@
 
 | 序号 | 宏 & 描述                                                    |
 | ---- | ------------------------------------------------------------ |
-| 1    | [int setjmp(jmp_buf environment)](https://www.runoob.com/cprogramming/c-macro-setjmp.html) 这个宏把当前环境保存在变量 **environment** 中，以便函数 **longjmp()** 后续使用。如果这个宏直接从宏调用中返回，则它会返回零，但是如果它从 **longjmp()** 函数调用中返回，则它会返回一个非零值。 |
+| 1    | [int setjmp(jmp_buf environment)](setjmp.html) 这个宏把当前环境保存在变量 **environment** 中，以便函数 **longjmp()** 后续使用。如果这个宏直接从宏调用中返回，则它会返回零，但是如果它从 **longjmp()** 函数调用中返回，则它会返回一个非零值。 |
 
 ## 库函数
 
@@ -28,4 +28,4 @@
 
 | 序号 | 函数 & 描述                                                  |
 | ---- | ------------------------------------------------------------ |
-| 1    | [void longjmp(jmp_buf environment, int value)](https://www.runoob.com/cprogramming/c-function-longjmp.html) 该函数恢复最近一次调用 **setjmp()** 宏时保存的环境，**jmp_buf** 参数的设置是由之前调用 setjmp() 生成的。 |
+| 1    | [void longjmp(jmp_buf environment, int value)](longjmp.html) 该函数恢复最近一次调用 **setjmp()** 宏时保存的环境，**jmp_buf** 参数的设置是由之前调用 setjmp() 生成的。 |

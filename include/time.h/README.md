@@ -48,14 +48,14 @@ struct tm {
 
 | 序号 | 函数 & 描述                                                  |
 | ---- | ------------------------------------------------------------ |
-| 1    | [char *asctime(const struct tm *timeptr)](https://www.runoob.com/cprogramming/c-function-asctime.html) 返回一个指向字符串的指针，它代表了结构 timeptr 的日期和时间。 |
-| 2    | [clock_t clock(void)](https://www.runoob.com/cprogramming/c-function-clock.html) 返回程序执行起（一般为程序的开头），处理器时钟所使用的时间。 |
-| 3    | [char *ctime(const time_t *timer)](https://www.runoob.com/cprogramming/c-function-ctime.html) 返回一个表示当地时间的字符串，当地时间是基于参数 timer。 |
-| 4    | [double difftime(time_t time1, time_t time2)](https://www.runoob.com/cprogramming/c-function-difftime.html) 返回 time1 和 time2 之间相差的秒数 (time1-time2)。 |
-| 5    | [struct tm *gmtime(const time_t *timer)](https://www.runoob.com/cprogramming/c-function-gmtime.html) timer 的值被分解为 tm 结构，并用协调世界时（UTC）也被称为格林尼治标准时间（GMT）表示。 |
-| 6    | [struct tm *localtime(const time_t *timer)](https://www.runoob.com/cprogramming/c-function-localtime.html) timer 的值被分解为 tm 结构，并用本地时区表示。 |
-| 7    | [time_t mktime(struct tm *timeptr)](https://www.runoob.com/cprogramming/c-function-mktime.html) 把 timeptr 所指向的结构转换为一个依据本地时区的 time_t 值。 |
-| 8    | [size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr)](https://www.runoob.com/cprogramming/c-function-strftime.html) 根据 format 中定义的格式化规则，格式化结构 timeptr 表示的时间，并把它存储在 str 中。 |
-| 9    | [time_t time(time_t *timer)](https://www.runoob.com/cprogramming/c-function-time.html) 计算当前日历时间，并把它编码成 time_t 格式。 |
+| 1    | [char *asctime(const struct tm *timeptr)](*asctime.html) 返回一个指向字符串的指针，它代表了结构 timeptr 的日期和时间。 |
+| 2    | [clock_t clock(void)](clock.html) 返回程序执行起（一般为程序的开头），处理器时钟所使用的时间。 |
+| 3    | [char *ctime(const time_t *timer)](*ctime.html) 返回一个表示当地时间的字符串，当地时间是基于参数 timer。 |
+| 4    | [double difftime(time_t time1, time_t time2)](difftime.html) 返回 time1 和 time2 之间相差的秒数 (time1-time2)。 |
+| 5    | [struct tm *gmtime(const time_t *timer)](*gmtime.html) timer 的值被分解为 tm 结构，并用协调世界时（UTC）也被称为格林尼治标准时间（GMT）表示。 |
+| 6    | [struct tm *localtime(const time_t *timer)](*localtime.html) timer 的值被分解为 tm 结构，并用本地时区表示。 |
+| 7    | [time_t mktime(struct tm *timeptr)](mktime.html) 把 timeptr 所指向的结构转换为一个依据本地时区的 time_t 值。 |
+| 8    | [size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr)](strftime.html) 根据 format 中定义的格式化规则，格式化结构 timeptr 表示的时间，并把它存储在 str 中。 |
+| 9    | [time_t time(time_t *timer)](time.html) 计算当前日历时间，并把它编码成 time_t 格式。 |
 
  

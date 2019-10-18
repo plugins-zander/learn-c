@@ -41,5 +41,5 @@
 
 | 序号 | 函数 & 描述                                                  |
 | ---- | ------------------------------------------------------------ |
-| 1    | [void (*signal(int sig, void (*func)(int)))(int)](https://www.runoob.com/cprogramming/c-function-signal.html) 该函数设置一个函数来处理信号，即信号处理程序。 |
-| 2    | [int raise(int sig)](https://www.runoob.com/cprogramming/c-function-raise.html) 该函数会促使生成信号 **sig**。sig 参数与 SIG 宏兼容。 |
+| 1    | [void (*signal(int sig, void (*func)(int)))(int)](signal.html) 该函数设置一个函数来处理信号，即信号处理程序。 |
+| 2    | [int raise(int sig)](raise.html) 该函数会促使生成信号 **sig**。sig 参数与 SIG 宏兼容。 |

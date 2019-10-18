@@ -16,6 +16,6 @@ C 标准库的 **errno.h** 头文件定义了整数变量 **errno**，它是通�
 
 | 序号 | 宏 & 描述                                                    |
 | ---- | ------------------------------------------------------------ |
-| 1    | [extern int errno](https://www.runoob.com/cprogramming/c-macro-errno.html) 这是通过系统调用设置的宏，在错误事件中的某些库函数表明了什么发生了错误。 |
-| 2    | [EDOM Domain Error](https://www.runoob.com/cprogramming/c-macro-edom.html) 这个宏表示一个域错误，它在输入参数超出数学函数定义的域时发生，errno 被设置为 EDOM。 |
-| 3    | [ERANGE Range Error](https://www.runoob.com/cprogramming/c-macro-erange.html) 这个宏表示一个范围错误，它在输入参数超出数学函数定义的范围时发生，errno 被设置为 ERANGE。 |
+| 1    | [extern int errno](extern_int_errno.html) 这是通过系统调用设置的宏，在错误事件中的某些库函数表明了什么发生了错误。 |
+| 2    | [EDOM Domain Error](EDOM_Domain_Error.html) 这个宏表示一个域错误，它在输入参数超出数学函数定义的域时发生，errno 被设置为 EDOM。 |
+| 3    | [ERANGE Range Error](ERANGE_Range_Error.html) 这个宏表示一个范围错误，它在输入参数超出数学函数定义的范围时发生，errno 被设置为 ERANGE。 |
