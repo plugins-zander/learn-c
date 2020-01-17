@@ -1,0 +1,4300 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>float.h · learn-c</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Zander Zhao">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/css/gitalk.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../limits.h/" />
+    
+    
+    <link rel="prev" href="../errno.h/ERANGE_Range_Error.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://zlogs.net" target="_blank" class="custom-link"># 博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://zlogs.net/learn-books" target="_blank" class="custom-link"># 总目录</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    本书简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../books/1010.html">
+            
+                <a href="../../books/1010.html">
+            
+                    
+                    速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../books/1011.html">
+            
+                <a href="../../books/1011.html">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../books/1012.html">
+            
+                <a href="../../books/1012.html">
+            
+                    
+                    发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../books/1147.html">
+            
+                <a href="../../books/1147.html">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../books/1013.html">
+            
+                <a href="../../books/1013.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../books/1014.html">
+            
+                <a href="../../books/1014.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../books/1136.html">
+            
+                <a href="../../books/1136.html">
+            
+                    
+                    标识符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1.1" data-path="../../books/1137.html">
+            
+                <a href="../../books/1137.html">
+            
+                    
+                    关键字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="../../books/1138.html">
+            
+                <a href="../../books/1138.html">
+            
+                    
+                    预定义标识符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.3" data-path="../../books/1139.html">
+            
+                <a href="../../books/1139.html">
+            
+                    
+                    用户自定义标识符
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../books/1133.html">
+            
+                <a href="../../books/1133.html">
+            
+                    
+                    行与缩进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../books/1134.html">
+            
+                <a href="../../books/1134.html">
+            
+                    
+                    大小写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../books/1135.html">
+            
+                <a href="../../books/1135.html">
+            
+                    
+                    注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../books/1146.html">
+            
+                <a href="../../books/1146.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../../books/1134.html">
+            
+                <a href="../../books/1134.html">
+            
+                    
+                    语句结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../books/1015.html">
+            
+                <a href="../../books/1015.html">
+            
+                    
+                    风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../books/1016.html">
+            
+                <a href="../../books/1016.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../books/1148.html">
+            
+                <a href="../../books/1148.html">
+            
+                    
+                    组成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../books/1017.html">
+            
+                <a href="../../books/1017.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" data-path="../../books/1018.html">
+            
+                <a href="../../books/1018.html">
+            
+                    
+                    数值类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1.1" data-path="../../books/1019.html">
+            
+                <a href="../../books/1019.html">
+            
+                    
+                    整型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.1.2" data-path="../../books/1020.html">
+            
+                <a href="../../books/1020.html">
+            
+                    
+                    浮点型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="../../books/1040.html">
+            
+                <a href="../../books/1040.html">
+            
+                    
+                    字符类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../books/1021.html">
+            
+                <a href="../../books/1021.html">
+            
+                    
+                    构造类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1" data-path="../../books/1022.html">
+            
+                <a href="../../books/1022.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1.1" data-path="../../books/1074.html">
+            
+                <a href="../../books/1074.html">
+            
+                    
+                    使用过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1.1.1" data-path="../../books/1075.html">
+            
+                <a href="../../books/1075.html">
+            
+                    
+                    一维数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.1.1.2" data-path="../../books/1076.html">
+            
+                <a href="../../books/1076.html">
+            
+                    
+                    多维数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.1.1.3" data-path="../../books/1081.html">
+            
+                <a href="../../books/1081.html">
+            
+                    
+                    字符数组(字符串)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.1.2" data-path="../../books/1077.html">
+            
+                <a href="../../books/1077.html">
+            
+                    
+                    功能补充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1.2.1" data-path="../../books/1078.html">
+            
+                <a href="../../books/1078.html">
+            
+                    
+                    传递数组给函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.1.2.2" data-path="../../books/1079.html">
+            
+                <a href="../../books/1079.html">
+            
+                    
+                    从函数返回数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.1.2.3" data-path="../../books/1080.html">
+            
+                <a href="../../books/1080.html">
+            
+                    
+                    指向数组的指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.2" data-path="../../books/1023.html">
+            
+                <a href="../../books/1023.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.2.1" data-path="../../books/1091.html">
+            
+                <a href="../../books/1091.html">
+            
+                    
+                    使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.2.2" data-path="../../books/1092.html">
+            
+                <a href="../../books/1092.html">
+            
+                    
+                    位域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.3" data-path="../../books/1024.html">
+            
+                <a href="../../books/1024.html">
+            
+                    
+                    共用体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.4" data-path="../../books/1039.html">
+            
+                <a href="../../books/1039.html">
+            
+                    
+                    枚举类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../books/1025.html">
+            
+                <a href="../../books/1025.html">
+            
+                    
+                    指针类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1" data-path="../../books/1115.html">
+            
+                <a href="../../books/1115.html">
+            
+                    
+                    使用过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1.1" data-path="../../books/1116.html">
+            
+                <a href="../../books/1116.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2" data-path="../../books/1117.html">
+            
+                <a href="../../books/1117.html">
+            
+                    
+                    指针数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.3" data-path="../../books/1123.html">
+            
+                <a href="../../books/1123.html">
+            
+                    
+                    函数指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2" data-path="../../books/1118.html">
+            
+                <a href="../../books/1118.html">
+            
+                    
+                    功能补充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.2.1" data-path="../../books/1119.html">
+            
+                <a href="../../books/1119.html">
+            
+                    
+                    指针的运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2.2" data-path="../../books/1120.html">
+            
+                <a href="../../books/1120.html">
+            
+                    
+                    指向指针的指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2.3" data-path="../../books/1121.html">
+            
+                <a href="../../books/1121.html">
+            
+                    
+                    传递指针给函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2.4" data-path="../../books/1122.html">
+            
+                <a href="../../books/1122.html">
+            
+                    
+                    从函数返回指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../books/1026.html">
+            
+                <a href="../../books/1026.html">
+            
+                    
+                    空类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../books/1027.html">
+            
+                <a href="../../books/1027.html">
+            
+                    
+                    自定义类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.5.1" data-path="../../books/1093.html">
+            
+                <a href="../../books/1093.html">
+            
+                    
+                    使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5.2" data-path="../../books/1094.html">
+            
+                <a href="../../books/1094.html">
+            
+                    
+                    区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../books/1124.html">
+            
+                <a href="../../books/1124.html">
+            
+                    
+                    类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../books/1042.html">
+            
+                <a href="../../books/1042.html">
+            
+                    
+                    常量与变量
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../books/1043.html">
+            
+                <a href="../../books/1043.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../books/1044.html">
+            
+                <a href="../../books/1044.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../books/1125.html">
+            
+                <a href="../../books/1125.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../books/1126.html">
+            
+                <a href="../../books/1126.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../books/1127.html">
+            
+                <a href="../../books/1127.html">
+            
+                    
+                    auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../books/1128.html">
+            
+                <a href="../../books/1128.html">
+            
+                    
+                    register
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../books/1129.html">
+            
+                <a href="../../books/1129.html">
+            
+                    
+                    static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../books/1130.html">
+            
+                <a href="../../books/1130.html">
+            
+                    
+                    extern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../books/1131.html">
+            
+                <a href="../../books/1131.html">
+            
+                    
+                    const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../books/1132.html">
+            
+                <a href="../../books/1132.html">
+            
+                    
+                    volatile
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../books/1035.html">
+            
+                <a href="../../books/1035.html">
+            
+                    
+                    运算符与表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../books/1045.html">
+            
+                <a href="../../books/1045.html">
+            
+                    
+                    按照属性分类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../books/1063.html">
+            
+                <a href="../../books/1063.html">
+            
+                    
+                    基本
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1.1" data-path="../../books/1047.html">
+            
+                <a href="../../books/1047.html">
+            
+                    
+                    赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.2" data-path="../../books/1055.html">
+            
+                <a href="../../books/1055.html">
+            
+                    
+                    括号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.3" data-path="../../books/1048.html">
+            
+                <a href="../../books/1048.html">
+            
+                    
+                    逗号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../books/1064.html">
+            
+                <a href="../../books/1064.html">
+            
+                    
+                    计算
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.2.1" data-path="../../books/1046.html">
+            
+                <a href="../../books/1046.html">
+            
+                    
+                    算术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.2" data-path="../../books/1052.html">
+            
+                <a href="../../books/1052.html">
+            
+                    
+                    位操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.3" data-path="../../books/1054.html">
+            
+                <a href="../../books/1054.html">
+            
+                    
+                    求字节
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../../books/1065.html">
+            
+                <a href="../../books/1065.html">
+            
+                    
+                    判断
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.3.1" data-path="../../books/1049.html">
+            
+                <a href="../../books/1049.html">
+            
+                    
+                    关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3.2" data-path="../../books/1050.html">
+            
+                <a href="../../books/1050.html">
+            
+                    
+                    逻辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3.3" data-path="../../books/1051.html">
+            
+                <a href="../../books/1051.html">
+            
+                    
+                    条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../../books/1066.html">
+            
+                <a href="../../books/1066.html">
+            
+                    
+                    构件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.4.1" data-path="../../books/1056.html">
+            
+                <a href="../../books/1056.html">
+            
+                    
+                    下标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4.2" data-path="../../books/1057.html">
+            
+                <a href="../../books/1057.html">
+            
+                    
+                    成员
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4.3" data-path="../../books/1053.html">
+            
+                <a href="../../books/1053.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../books/1058.html">
+            
+                <a href="../../books/1058.html">
+            
+                    
+                    按照参与个数分类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../books/1059.html">
+            
+                <a href="../../books/1059.html">
+            
+                    
+                    单目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../books/1060.html">
+            
+                <a href="../../books/1060.html">
+            
+                    
+                    双目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../books/1061.html">
+            
+                <a href="../../books/1061.html">
+            
+                    
+                    三目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../books/1062.html">
+            
+                <a href="../../books/1062.html">
+            
+                    
+                    优先级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../books/1032.html">
+            
+                <a href="../../books/1032.html">
+            
+                    
+                    语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../books/1151.html">
+            
+                <a href="../../books/1151.html">
+            
+                    
+                    语句块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../books/1031.html">
+            
+                <a href="../../books/1031.html">
+            
+                    
+                    控制语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../books/1033.html">
+            
+                <a href="../../books/1033.html">
+            
+                    
+                    选择结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../books/1034.html">
+            
+                <a href="../../books/1034.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../books/1036.html">
+            
+                <a href="../../books/1036.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../../books/1067.html">
+            
+                <a href="../../books/1067.html">
+            
+                    
+                    使用过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1.1" data-path="../../books/1068.html">
+            
+                <a href="../../books/1068.html">
+            
+                    
+                    定义函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.1.2" data-path="../../books/1069.html">
+            
+                <a href="../../books/1069.html">
+            
+                    
+                    函数声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.1.3" data-path="../../books/1070.html">
+            
+                <a href="../../books/1070.html">
+            
+                    
+                    调用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../../books/1071.html">
+            
+                <a href="../../books/1071.html">
+            
+                    
+                    函数参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../../books/1072.html">
+            
+                <a href="../../books/1072.html">
+            
+                    
+                    作用域规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="../../books/1145.html">
+            
+                <a href="../../books/1145.html">
+            
+                    
+                    特殊的函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.4.1" data-path="../../books/1144.html">
+            
+                <a href="../../books/1144.html">
+            
+                    
+                    主函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../books/1149.html">
+            
+                <a href="../../books/1149.html">
+            
+                    
+                    导入机制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../books/1096.html">
+            
+                <a href="../../books/1096.html">
+            
+                    
+                    头文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../books/1037.html">
+            
+                <a href="../../books/1037.html">
+            
+                    
+                    功能设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../books/1095.html">
+            
+                <a href="../../books/1095.html">
+            
+                    
+                    预处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../books/1028.html">
+            
+                <a href="../../books/1028.html">
+            
+                    
+                    输入输出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.2.1" data-path="../../books/1029.html">
+            
+                <a href="../../books/1029.html">
+            
+                    
+                    数据输入输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2.2" data-path="../../books/1030.html">
+            
+                <a href="../../books/1030.html">
+            
+                    
+                    文件输入输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../books/1099.html">
+            
+                <a href="../../books/1099.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../books/1100.html">
+            
+                <a href="../../books/1100.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../books/1097.html">
+            
+                <a href="../../books/1097.html">
+            
+                    
+                    C标准库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../assert.h/">
+            
+                <a href="../assert.h/">
+            
+                    
+                    assert.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../assert.h/assert.html">
+            
+                <a href="../assert.h/assert.html">
+            
+                    
+                    void assert(int expression)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../ctype.h/">
+            
+                <a href="../ctype.h/">
+            
+                    
+                    ctype.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../ctype.h/isalnum.html">
+            
+                <a href="../ctype.h/isalnum.html">
+            
+                    
+                    int isalnum(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../ctype.h/isalpha.html">
+            
+                <a href="../ctype.h/isalpha.html">
+            
+                    
+                    int isalpha(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../ctype.h/iscntrl.html">
+            
+                <a href="../ctype.h/iscntrl.html">
+            
+                    
+                    int iscntrl(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../ctype.h/isdigit.html">
+            
+                <a href="../ctype.h/isdigit.html">
+            
+                    
+                    int isdigit(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.5" data-path="../ctype.h/isgraph.html">
+            
+                <a href="../ctype.h/isgraph.html">
+            
+                    
+                    int isgraph(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.6" data-path="../ctype.h/islower.html">
+            
+                <a href="../ctype.h/islower.html">
+            
+                    
+                    int islower(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.7" data-path="../ctype.h/isprint.html">
+            
+                <a href="../ctype.h/isprint.html">
+            
+                    
+                    int isprint(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.8" data-path="../ctype.h/ispunct.html">
+            
+                <a href="../ctype.h/ispunct.html">
+            
+                    
+                    int ispunct(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.9" data-path="../ctype.h/isspace.html">
+            
+                <a href="../ctype.h/isspace.html">
+            
+                    
+                    int isspace(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.10" data-path="../ctype.h/isupper.html">
+            
+                <a href="../ctype.h/isupper.html">
+            
+                    
+                    int isupper(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.11" data-path="../ctype.h/isxdigit.html">
+            
+                <a href="../ctype.h/isxdigit.html">
+            
+                    
+                    int isxdigit(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.12" data-path="../ctype.h/tolower.html">
+            
+                <a href="../ctype.h/tolower.html">
+            
+                    
+                    int tolower(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.13" data-path="../ctype.h/toupper.html">
+            
+                <a href="../ctype.h/toupper.html">
+            
+                    
+                    int toupper(int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../errno.h/">
+            
+                <a href="../errno.h/">
+            
+                    
+                    errno.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.4.1" data-path="../errno.h/extern_int_errno.html">
+            
+                <a href="../errno.h/extern_int_errno.html">
+            
+                    
+                    extern int errno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4.2" data-path="../errno.h/EDOM_Domain_Error.html">
+            
+                <a href="../errno.h/EDOM_Domain_Error.html">
+            
+                    
+                    EDOM Domain Error
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4.3" data-path="../errno.h/ERANGE_Range_Error.html">
+            
+                <a href="../errno.h/ERANGE_Range_Error.html">
+            
+                    
+                    ERANGE Range Error
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    float.h
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../limits.h/">
+            
+                <a href="../limits.h/">
+            
+                    
+                    limits.h
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../locale.h/">
+            
+                <a href="../locale.h/">
+            
+                    
+                    locale.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.7.1" data-path="../locale.h/*setlocale.html">
+            
+                <a href="../locale.h/*setlocale.html">
+            
+                    
+                    char *setlocale(int category, const char locale)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7.2" data-path="../locale.h/*localeconv.html">
+            
+                <a href="../locale.h/*localeconv.html">
+            
+                    
+                    struct lconv *localeconv(void)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../math.h/">
+            
+                <a href="../math.h/">
+            
+                    
+                    math.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.8.1" data-path="../math.h/acos.html">
+            
+                <a href="../math.h/acos.html">
+            
+                    
+                    double acos(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.2" data-path="../math.h/asin.html">
+            
+                <a href="../math.h/asin.html">
+            
+                    
+                    double asin(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.3" data-path="../math.h/atan.html">
+            
+                <a href="../math.h/atan.html">
+            
+                    
+                    double atan(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.4" data-path="../math.h/atan2.html">
+            
+                <a href="../math.h/atan2.html">
+            
+                    
+                    double atan2(double y, double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.5" data-path="../math.h/cos.html">
+            
+                <a href="../math.h/cos.html">
+            
+                    
+                    double cos(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.6" data-path="../math.h/cosh.html">
+            
+                <a href="../math.h/cosh.html">
+            
+                    
+                    double cosh(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.7" data-path="../math.h/sin.html">
+            
+                <a href="../math.h/sin.html">
+            
+                    
+                    double sin(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.8" data-path="../math.h/sinh.html">
+            
+                <a href="../math.h/sinh.html">
+            
+                    
+                    double sinh(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.9" data-path="../math.h/tanh.html">
+            
+                <a href="../math.h/tanh.html">
+            
+                    
+                    double tanh(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.10" data-path="../math.h/exp.html">
+            
+                <a href="../math.h/exp.html">
+            
+                    
+                    double exp(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.11" data-path="../math.h/frexp.html">
+            
+                <a href="../math.h/frexp.html">
+            
+                    
+                    double frexp(double x, int *exponent)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.12" data-path="../math.h/ldexp.html">
+            
+                <a href="../math.h/ldexp.html">
+            
+                    
+                    double ldexp(double x, int exponent)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.13" data-path="../math.h/log.html">
+            
+                <a href="../math.h/log.html">
+            
+                    
+                    double log(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.14" data-path="../math.h/log10.html">
+            
+                <a href="../math.h/log10.html">
+            
+                    
+                    double log10(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.15" data-path="../math.h/modf.html">
+            
+                <a href="../math.h/modf.html">
+            
+                    
+                    double modf(double x, double *integer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.16" data-path="../math.h/pow.html">
+            
+                <a href="../math.h/pow.html">
+            
+                    
+                    double pow(double x, double y)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.17" data-path="../math.h/sqrt.html">
+            
+                <a href="../math.h/sqrt.html">
+            
+                    
+                    double sqrt(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.18" data-path="../math.h/ceil.html">
+            
+                <a href="../math.h/ceil.html">
+            
+                    
+                    double ceil(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.19" data-path="../math.h/fabs.html">
+            
+                <a href="../math.h/fabs.html">
+            
+                    
+                    double fabs(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.20" data-path="../math.h/floor.html">
+            
+                <a href="../math.h/floor.html">
+            
+                    
+                    double floor(double x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8.21" data-path="../math.h/fmod.html">
+            
+                <a href="../math.h/fmod.html">
+            
+                    
+                    double fmod(double x, double y)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../setjmp.h/">
+            
+                <a href="../setjmp.h/">
+            
+                    
+                    setjmp.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.9.1" data-path="../setjmp.h/setjmp.html">
+            
+                <a href="../setjmp.h/setjmp.html">
+            
+                    
+                    int setjmp(jmp_buf environment)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9.2" data-path="../setjmp.h/longjmp.html">
+            
+                <a href="../setjmp.h/longjmp.html">
+            
+                    
+                    void longjmp(jmp_buf environment, int value)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../signal.h/">
+            
+                <a href="../signal.h/">
+            
+                    
+                    signal.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.10.1" data-path="../signal.h/signal.html">
+            
+                <a href="../signal.h/signal.html">
+            
+                    
+                    void (signal(int sig, void (func)(int)))(int)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10.2" data-path="../signal.h/raise.html">
+            
+                <a href="../signal.h/raise.html">
+            
+                    
+                    int raise(int sig)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../stdarg.h/">
+            
+                <a href="../stdarg.h/">
+            
+                    
+                    stdarg.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.11.1" data-path="../stdarg.h/va_start.html">
+            
+                <a href="../stdarg.h/va_start.html">
+            
+                    
+                    void va_start(va_list ap, last_arg)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11.2" data-path="../stdarg.h/va_arg.html">
+            
+                <a href="../stdarg.h/va_arg.html">
+            
+                    
+                    type va_arg(va_list ap, type)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11.3" data-path="../stdarg.h/va_end.html">
+            
+                <a href="../stdarg.h/va_end.html">
+            
+                    
+                    void va_end(va_list ap)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../stddef.h/">
+            
+                <a href="../stddef.h/">
+            
+                    
+                    stddef.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.12.1" data-path="../stddef.h/NULL.html">
+            
+                <a href="../stddef.h/NULL.html">
+            
+                    
+                    NULL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12.2" data-path="../stddef.h/offsetof.html">
+            
+                <a href="../stddef.h/offsetof.html">
+            
+                    
+                    offsetof(type, member-designator)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../stdio.h/">
+            
+                <a href="../stdio.h/">
+            
+                    
+                    stdio.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.13.1" data-path="../stdio.h/fclose.html">
+            
+                <a href="../stdio.h/fclose.html">
+            
+                    
+                    int fclose(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.2" data-path="../stdio.h/clearerr.html">
+            
+                <a href="../stdio.h/clearerr.html">
+            
+                    
+                    void clearerr(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.3" data-path="../stdio.h/feof.html">
+            
+                <a href="../stdio.h/feof.html">
+            
+                    
+                    int feof(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.4" data-path="../stdio.h/ferror.html">
+            
+                <a href="../stdio.h/ferror.html">
+            
+                    
+                    int ferror(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.5" data-path="../stdio.h/fflush.html">
+            
+                <a href="../stdio.h/fflush.html">
+            
+                    
+                    int fflush(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.6" data-path="../stdio.h/fgetpos.html">
+            
+                <a href="../stdio.h/fgetpos.html">
+            
+                    
+                    int fgetpos(FILE stream, fpos_t pos)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.7" data-path="../stdio.h/*fopen.html">
+            
+                <a href="../stdio.h/*fopen.html">
+            
+                    
+                    FILE fopen(const char filename, const char *mode)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.8" data-path="../stdio.h/fread.html">
+            
+                <a href="../stdio.h/fread.html">
+            
+                    
+                    size_t fread(void ptr, size_t size, size_t nmemb, FILE stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.9" data-path="../stdio.h/*freopen.html">
+            
+                <a href="../stdio.h/*freopen.html">
+            
+                    
+                    FILE freopen(const char filename, const char mode, FILE stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.10" data-path="../stdio.h/fseek.html">
+            
+                <a href="../stdio.h/fseek.html">
+            
+                    
+                    int fseek(FILE *stream, long int offset, int whence)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.11" data-path="../stdio.h/fsetpos.html">
+            
+                <a href="../stdio.h/fsetpos.html">
+            
+                    
+                    int fsetpos(FILE stream, const fpos_t pos)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.12" data-path="../stdio.h/ftell.html">
+            
+                <a href="../stdio.h/ftell.html">
+            
+                    
+                    long int ftell(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.13" data-path="../stdio.h/fwrite.html">
+            
+                <a href="../stdio.h/fwrite.html">
+            
+                    
+                    size_t fwrite(const void ptr, size_t size, size_t nmemb, FILE stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.14" data-path="../stdio.h/remove.html">
+            
+                <a href="../stdio.h/remove.html">
+            
+                    
+                    int remove(const char *filename)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.15" data-path="../stdio.h/rename.html">
+            
+                <a href="../stdio.h/rename.html">
+            
+                    
+                    int rename(const char old_filename, const char new_filename)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.16" data-path="../stdio.h/rewind.html">
+            
+                <a href="../stdio.h/rewind.html">
+            
+                    
+                    void rewind(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.17" data-path="../stdio.h/setbuf.html">
+            
+                <a href="../stdio.h/setbuf.html">
+            
+                    
+                    void setbuf(FILE stream, char buffer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.18" data-path="../stdio.h/setvbuf.html">
+            
+                <a href="../stdio.h/setvbuf.html">
+            
+                    
+                    int setvbuf(FILE stream, char buffer, int mode, size_t size)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.19" data-path="../stdio.h/*tmpfile.html">
+            
+                <a href="../stdio.h/*tmpfile.html">
+            
+                    
+                    FILE *tmpfile(void)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.20" data-path="../stdio.h/*tmpnam.html">
+            
+                <a href="../stdio.h/*tmpnam.html">
+            
+                    
+                    char tmpnam(char str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.21" data-path="../stdio.h/fprintf.html">
+            
+                <a href="../stdio.h/fprintf.html">
+            
+                    
+                    int fprintf(FILE stream, const char format, ...)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.22" data-path="../stdio.h/printf.html">
+            
+                <a href="../stdio.h/printf.html">
+            
+                    
+                    int printf(const char *format, ...)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.23" data-path="../stdio.h/sprintf.html">
+            
+                <a href="../stdio.h/sprintf.html">
+            
+                    
+                    int sprintf(char str, const char format, ...)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.24" data-path="../stdio.h/vfprintf.html">
+            
+                <a href="../stdio.h/vfprintf.html">
+            
+                    
+                    int vfprintf(FILE stream, const char format, va_list arg)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.25" data-path="../stdio.h/vprintf.html">
+            
+                <a href="../stdio.h/vprintf.html">
+            
+                    
+                    int vprintf(const char *format, va_list arg)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.26" data-path="../stdio.h/vsprintf.html">
+            
+                <a href="../stdio.h/vsprintf.html">
+            
+                    
+                    int vsprintf(char str, const char format, va_list arg)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.27" data-path="../stdio.h/fscanf.html">
+            
+                <a href="../stdio.h/fscanf.html">
+            
+                    
+                    int fscanf(FILE stream, const char format, ...)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.28" data-path="../stdio.h/scanf.html">
+            
+                <a href="../stdio.h/scanf.html">
+            
+                    
+                    int scanf(const char *format, ...)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.29" data-path="../stdio.h/sscanf.html">
+            
+                <a href="../stdio.h/sscanf.html">
+            
+                    
+                    int sscanf(const char str, const char format, ...)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.30" data-path="../stdio.h/fgetc.html">
+            
+                <a href="../stdio.h/fgetc.html">
+            
+                    
+                    int fgetc(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.31" data-path="../stdio.h/*fgets.html">
+            
+                <a href="../stdio.h/*fgets.html">
+            
+                    
+                    char fgets(char str, int n, FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.32" data-path="../stdio.h/fputc.html">
+            
+                <a href="../stdio.h/fputc.html">
+            
+                    
+                    int fputc(int char, FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.33" data-path="../stdio.h/fputs.html">
+            
+                <a href="../stdio.h/fputs.html">
+            
+                    
+                    int fputs(const char str, FILE stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.34" data-path="../stdio.h/getc.html">
+            
+                <a href="../stdio.h/getc.html">
+            
+                    
+                    int getc(FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.35" data-path="../stdio.h/getchar.html">
+            
+                <a href="../stdio.h/getchar.html">
+            
+                    
+                    int getchar(void)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.36" data-path="../stdio.h/*gets.html">
+            
+                <a href="../stdio.h/*gets.html">
+            
+                    
+                    char gets(char str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.37" data-path="../stdio.h/putc.html">
+            
+                <a href="../stdio.h/putc.html">
+            
+                    
+                    int putc(int char, FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.38" data-path="../stdio.h/putchar.html">
+            
+                <a href="../stdio.h/putchar.html">
+            
+                    
+                    int putchar(int char)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.39" data-path="../stdio.h/puts.html">
+            
+                <a href="../stdio.h/puts.html">
+            
+                    
+                    int puts(const char *str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.40" data-path="../stdio.h/ungetc.html">
+            
+                <a href="../stdio.h/ungetc.html">
+            
+                    
+                    int ungetc(int char, FILE *stream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13.41" data-path="../stdio.h/perror.html">
+            
+                <a href="../stdio.h/perror.html">
+            
+                    
+                    void perror(const char *str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../stdlib.h/">
+            
+                <a href="../stdlib.h/">
+            
+                    
+                    stdlib.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.14.1" data-path="../stdlib.h/atof.html">
+            
+                <a href="../stdlib.h/atof.html">
+            
+                    
+                    double atof(const char *str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.2" data-path="../stdlib.h/atoi.html">
+            
+                <a href="../stdlib.h/atoi.html">
+            
+                    
+                    int atoi(const char *str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.3" data-path="../stdlib.h/atol.html">
+            
+                <a href="../stdlib.h/atol.html">
+            
+                    
+                    long int atol(const char *str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.4" data-path="../stdlib.h/strtod.html">
+            
+                <a href="../stdlib.h/strtod.html">
+            
+                    
+                    double strtod(const char str, char *endptr)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.5" data-path="../stdlib.h/strtol.html">
+            
+                <a href="../stdlib.h/strtol.html">
+            
+                    
+                    long int strtol(const char str, char *endptr, int base)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.6" data-path="../stdlib.h/strtoul.html">
+            
+                <a href="../stdlib.h/strtoul.html">
+            
+                    
+                    unsigned long int strtoul(const char str, char *endptr, int base)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.7" data-path="../stdlib.h/*calloc.html">
+            
+                <a href="../stdlib.h/*calloc.html">
+            
+                    
+                    void *calloc(size_t nitems, size_t size)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.8" data-path="../stdlib.h/free.html">
+            
+                <a href="../stdlib.h/free.html">
+            
+                    
+                    void free(void *ptr)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.9" data-path="../stdlib.h/*malloc.html">
+            
+                <a href="../stdlib.h/*malloc.html">
+            
+                    
+                    void *malloc(size_t size)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.10" data-path="../stdlib.h/*realloc.html">
+            
+                <a href="../stdlib.h/*realloc.html">
+            
+                    
+                    void realloc(void ptr, size_t size)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.11" data-path="../stdlib.h/abort.html">
+            
+                <a href="../stdlib.h/abort.html">
+            
+                    
+                    void abort(void)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.12" data-path="../stdlib.h/atexit.html">
+            
+                <a href="../stdlib.h/atexit.html">
+            
+                    
+                    int atexit(void (*func)(void))
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.13" data-path="../stdlib.h/exit.html">
+            
+                <a href="../stdlib.h/exit.html">
+            
+                    
+                    void exit(int status)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.14" data-path="../stdlib.h/*getenv.html">
+            
+                <a href="../stdlib.h/*getenv.html">
+            
+                    
+                    char getenv(const char name)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.15" data-path="../stdlib.h/system.html">
+            
+                <a href="../stdlib.h/system.html">
+            
+                    
+                    int system(const char *string)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.16" data-path="../stdlib.h/*bsearch.html">
+            
+                <a href="../stdlib.h/*bsearch.html">
+            
+                    
+                    void bsearch(const void key, const void base, size_t nitems, size_t size, int (compar)(const void , const void ))
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.17" data-path="../stdlib.h/qsort.html">
+            
+                <a href="../stdlib.h/qsort.html">
+            
+                    
+                    void qsort(void base, size_t nitems, size_t size, int (compar)(const void , const void))
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.18" data-path="../stdlib.h/abs.html">
+            
+                <a href="../stdlib.h/abs.html">
+            
+                    
+                    int abs(int x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.19" data-path="../stdlib.h/div.html">
+            
+                <a href="../stdlib.h/div.html">
+            
+                    
+                    div_t div(int numer, int denom)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.20" data-path="../stdlib.h/labs.html">
+            
+                <a href="../stdlib.h/labs.html">
+            
+                    
+                    long int labs(long int x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.21" data-path="../stdlib.h/ldiv.html">
+            
+                <a href="../stdlib.h/ldiv.html">
+            
+                    
+                    ldiv_t ldiv(long int numer, long int denom)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.22" data-path="../stdlib.h/rand.html">
+            
+                <a href="../stdlib.h/rand.html">
+            
+                    
+                    int rand(void)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.23" data-path="../stdlib.h/srand.html">
+            
+                <a href="../stdlib.h/srand.html">
+            
+                    
+                    void srand(unsigned int seed)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.24" data-path="../stdlib.h/mblen.html">
+            
+                <a href="../stdlib.h/mblen.html">
+            
+                    
+                    int mblen(const char *str, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.25" data-path="../stdlib.h/mbstowcs.html">
+            
+                <a href="../stdlib.h/mbstowcs.html">
+            
+                    
+                    size_t mbstowcs(schar_t pwcs, const char str, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.26" data-path="../stdlib.h/mbtowc.html">
+            
+                <a href="../stdlib.h/mbtowc.html">
+            
+                    
+                    int mbtowc(whcar_t pwc, const char str, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.27" data-path="../stdlib.h/wcstombs.html">
+            
+                <a href="../stdlib.h/wcstombs.html">
+            
+                    
+                    size_t wcstombs(char str, const wchar_t pwcs, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14.28" data-path="../stdlib.h/wctomb.html">
+            
+                <a href="../stdlib.h/wctomb.html">
+            
+                    
+                    int wctomb(char *str, wchar_t wchar)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../string.h/">
+            
+                <a href="../string.h/">
+            
+                    
+                    string.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.15.1" data-path="../string.h/*memchr.html">
+            
+                <a href="../string.h/*memchr.html">
+            
+                    
+                    void *memchr(const void str, int c, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.2" data-path="../string.h/memcmp.html">
+            
+                <a href="../string.h/memcmp.html">
+            
+                    
+                    int memcmp(const void str1, const void str2, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.3" data-path="../string.h/*memcpy.html">
+            
+                <a href="../string.h/*memcpy.html">
+            
+                    
+                    void memcpy(void dest, const void src, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.4" data-path="../string.h/memmove.html">
+            
+                <a href="../string.h/memmove.html">
+            
+                    
+                    void memmove(void dest, const void src, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.5" data-path="../string.h/*memset.html">
+            
+                <a href="../string.h/*memset.html">
+            
+                    
+                    void *memset(void str, int c, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.6" data-path="../string.h/*strcat.html">
+            
+                <a href="../string.h/*strcat.html">
+            
+                    
+                    char strcat(char dest, const char src)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.7" data-path="../string.h/*strncat.html">
+            
+                <a href="../string.h/*strncat.html">
+            
+                    
+                    char strncat(char dest, const char src, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.8" data-path="../string.h/*strchr.html">
+            
+                <a href="../string.h/*strchr.html">
+            
+                    
+                    char *strchr(const char str, int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.9" data-path="../string.h/strcmp.html">
+            
+                <a href="../string.h/strcmp.html">
+            
+                    
+                    int strcmp(const char str1, const char str2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.10" data-path="../string.h/strncmp.html">
+            
+                <a href="../string.h/strncmp.html">
+            
+                    
+                    int strncmp(const char str1, const char str2, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.11" data-path="../string.h/strcoll.html">
+            
+                <a href="../string.h/strcoll.html">
+            
+                    
+                    int strcoll(const char str1, const char str2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.12" data-path="../string.h/*strcpy.html">
+            
+                <a href="../string.h/*strcpy.html">
+            
+                    
+                    char strcpy(char dest, const char src)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.13" data-path="../string.h/*strncpy.html">
+            
+                <a href="../string.h/*strncpy.html">
+            
+                    
+                    char strncpy(char dest, const char src, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.14" data-path="../string.h/strcspn.html">
+            
+                <a href="../string.h/strcspn.html">
+            
+                    
+                    size_t strcspn(const char str1, const char str2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.15" data-path="../string.h/*strerror.html">
+            
+                <a href="../string.h/*strerror.html">
+            
+                    
+                    char *strerror(int errnum)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.16" data-path="../string.h/strlen.html">
+            
+                <a href="../string.h/strlen.html">
+            
+                    
+                    size_t strlen(const char *str)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.17" data-path="../string.h/strpbrk.html">
+            
+                <a href="../string.h/strpbrk.html">
+            
+                    
+                    char strpbrk(const char str1, const char str2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.18" data-path="../string.h/*strrchr.html">
+            
+                <a href="../string.h/*strrchr.html">
+            
+                    
+                    char *strrchr(const char str, int c)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.19" data-path="../string.h/strspn.html">
+            
+                <a href="../string.h/strspn.html">
+            
+                    
+                    size_t strspn(const char str1, const char str2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.20" data-path="../string.h/*strstr.html">
+            
+                <a href="../string.h/*strstr.html">
+            
+                    
+                    char strstr(const char haystack, const char needle)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.21" data-path="../string.h/*strtok.html">
+            
+                <a href="../string.h/*strtok.html">
+            
+                    
+                    char strtok(char str, const char delim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15.22" data-path="../string.h/strxfrm.html">
+            
+                <a href="../string.h/strxfrm.html">
+            
+                    
+                    size_t strxfrm(char dest, const char src, size_t n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../time.h/">
+            
+                <a href="../time.h/">
+            
+                    
+                    time.h
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.16.1" data-path="../time.h/*asctime.html">
+            
+                <a href="../time.h/*asctime.html">
+            
+                    
+                    char asctime(const struct tm timeptr)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.2" data-path="../time.h/clock.html">
+            
+                <a href="../time.h/clock.html">
+            
+                    
+                    clock_t clock(void)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.3" data-path="../time.h/*ctime.html">
+            
+                <a href="../time.h/*ctime.html">
+            
+                    
+                    char ctime(const time_t timer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.4" data-path="../time.h/difftime.html">
+            
+                <a href="../time.h/difftime.html">
+            
+                    
+                    double difftime(time_t time1, time_t time2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.5" data-path="../time.h/*gmtime.html">
+            
+                <a href="../time.h/*gmtime.html">
+            
+                    
+                    struct tm gmtime(const time_t timer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.6" data-path="../time.h/*localtime.html">
+            
+                <a href="../time.h/*localtime.html">
+            
+                    
+                    struct tm localtime(const time_t timer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.7" data-path="../time.h/mktime.html">
+            
+                <a href="../time.h/mktime.html">
+            
+                    
+                    time_t mktime(struct tm *timeptr)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.8" data-path="../time.h/strftime.html">
+            
+                <a href="../time.h/strftime.html">
+            
+                    
+                    size_t strftime(char str, size_t maxsize, const char format, const struct tm *timeptr)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16.9" data-path="../time.h/time.html">
+            
+                <a href="../time.h/time.html">
+            
+                    
+                    time_t time(time_t *timer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../books/1038.html">
+            
+                <a href="../../books/1038.html">
+            
+                    
+                    应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../books/1152.html">
+            
+                <a href="../../books/1152.html">
+            
+                    
+                    end
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >float.h</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="floath">float.h</h1>
+<h1 id="c-&#x6807;&#x51C6;&#x5E93;---">C &#x6807;&#x51C6;&#x5E93; - <float.h></float.h></h1>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>C &#x6807;&#x51C6;&#x5E93;&#x7684; <strong>float.h</strong> &#x5934;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x7EC4;&#x4E0E;&#x6D6E;&#x70B9;&#x503C;&#x76F8;&#x5173;&#x7684;&#x4F9D;&#x8D56;&#x4E8E;&#x5E73;&#x53F0;&#x7684;&#x5E38;&#x91CF;&#x3002;&#x8FD9;&#x4E9B;&#x5E38;&#x91CF;&#x662F;&#x7531; ANSI C &#x63D0;&#x51FA;&#x7684;&#xFF0C;&#x8FD9;&#x8BA9;&#x7A0B;&#x5E8F;&#x66F4;&#x5177;&#x6709;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x3002;&#x5728;&#x8BB2;&#x89E3;&#x8FD9;&#x4E9B;&#x5E38;&#x91CF;&#x4E4B;&#x524D;&#xFF0C;&#x6700;&#x597D;&#x5148;&#x5F04;&#x6E05;&#x695A;&#x6D6E;&#x70B9;&#x6570;&#x662F;&#x7531;&#x4E0B;&#x9762;&#x56DB;&#x4E2A;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7EC4;&#x4EF6;</th>
+<th>&#x7EC4;&#x4EF6;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>&#x7B26;&#x53F7; ( +/- )</td>
+</tr>
+<tr>
+<td>b</td>
+<td>&#x6307;&#x6570;&#x8868;&#x793A;&#x7684;&#x57FA;&#x6570;&#xFF0C;2 &#x8868;&#x793A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;10 &#x8868;&#x793A;&#x5341;&#x8FDB;&#x5236;&#xFF0C;16 &#x8868;&#x793A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF0C;&#x7B49;&#x7B49;...</td>
+</tr>
+<tr>
+<td>e</td>
+<td>&#x6307;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x4ECB;&#x4E8E;&#x6700;&#x5C0F;&#x503C; <strong>emin</strong> &#x548C;&#x6700;&#x5927;&#x503C; <strong>emax</strong> &#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>p</td>
+<td>&#x7CBE;&#x5EA6;&#xFF0C;&#x57FA;&#x6570; b &#x7684;&#x6709;&#x6548;&#x4F4D;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x57FA;&#x4E8E;&#x4EE5;&#x4E0A; 4 &#x4E2A;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF0C;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#x7684;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>floating-point = ( S ) p x be</strong></p>
+<p>&#x6216;</p>
+<p><strong>floating-point = (+/-) precision x baseexponent</strong></p>
+<h2 id="&#x5E93;&#x5B8F;">&#x5E93;&#x5B8F;</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x503C;&#x662F;&#x7279;&#x5B9A;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4E14;&#x662F;&#x901A;&#x8FC7; #define &#x6307;&#x4EE4;&#x6765;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x8FD9;&#x4E9B;&#x503C;&#x90FD;&#x4E0D;&#x5F97;&#x4F4E;&#x4E8E;&#x4E0B;&#x8FB9;&#x6240;&#x7ED9;&#x51FA;&#x7684;&#x503C;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5B9E;&#x4F8B; FLT &#x662F;&#x6307;&#x7C7B;&#x578B; float&#xFF0C;DBL &#x662F;&#x6307;&#x7C7B;&#x578B; double&#xFF0C;LDBL &#x662F;&#x6307;&#x7C7B;&#x578B; long double&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B8F;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FLT_ROUNDS</td>
+<td>&#x5B9A;&#x4E49;&#x6D6E;&#x70B9;&#x52A0;&#x6CD5;&#x7684;&#x820D;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4E0B;&#x5217;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x503C;&#xFF1A;-1 - &#x65E0;&#x6CD5;&#x786E;&#x5B9A;0 - &#x8D8B;&#x5411;&#x4E8E;&#x96F6;1 - &#x53BB;&#x6700;&#x8FD1;&#x7684;&#x503C;2 - &#x8D8B;&#x5411;&#x4E8E;&#x6B63;&#x65E0;&#x7A77;3 - &#x8D8B;&#x5411;&#x4E8E;&#x8D1F;&#x65E0;&#x7A77;</td>
+</tr>
+<tr>
+<td>FLT_RADIX 2</td>
+<td>&#x8FD9;&#x4E2A;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x6307;&#x6570;&#x8868;&#x793A;&#x7684;&#x57FA;&#x6570;&#x3002;&#x57FA;&#x6570; 2 &#x8868;&#x793A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x57FA;&#x6570; 10 &#x8868;&#x793A;&#x5341;&#x8FDB;&#x5236;&#xFF0C;&#x57FA;&#x6570; 16 &#x8868;&#x793A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_MANT_DIGDBL_MANT_DIGLDBL_MANT_DIG</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86; FLT_RADIX &#x57FA;&#x6570;&#x4E2D;&#x7684;&#x4F4D;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_DIG 6DBL_DIG 10LDBL_DIG 10</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x820D;&#x5165;&#x540E;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x8868;&#x793A;&#x7684;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF08;&#x57FA;&#x6570; 10&#xFF09;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_MIN_EXPDBL_MIN_EXPLDBL_MIN_EXP</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x57FA;&#x6570;&#x4E3A; FLT_RADIX &#x65F6;&#x7684;&#x6307;&#x6570;&#x7684;&#x6700;&#x5C0F;&#x8D1F;&#x6574;&#x6570;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_MIN_10_EXP -37DBL_MIN_10_EXP -37LDBL_MIN_10_EXP -37</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x57FA;&#x6570;&#x4E3A; 10 &#x65F6;&#x7684;&#x6307;&#x6570;&#x7684;&#x6700;&#x5C0F;&#x8D1F;&#x6574;&#x6570;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_MAX_EXPDBL_MAX_EXPLDBL_MAX_EXP</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x57FA;&#x6570;&#x4E3A; FLT_RADIX &#x65F6;&#x7684;&#x6307;&#x6570;&#x7684;&#x6700;&#x5927;&#x6574;&#x6570;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_MAX_10_EXP +37DBL_MAX_10_EXP +37LDBL_MAX_10_EXP +37</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x57FA;&#x6570;&#x4E3A; 10 &#x65F6;&#x7684;&#x6307;&#x6570;&#x7684;&#x6700;&#x5927;&#x6574;&#x6570;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_MAX 1E+37DBL_MAX 1E+37LDBL_MAX 1E+37</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x6700;&#x5927;&#x7684;&#x6709;&#x9650;&#x6D6E;&#x70B9;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_EPSILON 1E-5DBL_EPSILON 1E-9LDBL_EPSILON 1E-9</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x53EF;&#x8868;&#x793A;&#x7684;&#x6700;&#x5C0F;&#x6709;&#x6548;&#x6570;&#x5B57;&#x3002;</td>
+</tr>
+<tr>
+<td>FLT_MIN 1E-37DBL_MIN 1E-37LDBL_MIN 1E-37</td>
+<td>&#x8FD9;&#x4E9B;&#x5B8F;&#x5B9A;&#x4E49;&#x4E86;&#x6700;&#x5C0F;&#x7684;&#x6D6E;&#x70B9;&#x503C;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5B9E;&#x4F8B;">&#x5B9E;&#x4F8B;</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x5B9E;&#x4F8B;&#x6F14;&#x793A;&#x4E86; float.h &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E9B;&#x5E38;&#x91CF;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;float.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;The maximum value of float = %.10e\n&quot;</span>, FLT_MAX);
+   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;The minimum value of float = %.10e\n&quot;</span>, FLT_MIN);
+
+   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;The number of digits in the number = %.10e\n&quot;</span>, FLT_MANT_DIG);
+}
+</code></pre>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x7F16;&#x8BD1;&#x548C;&#x8FD0;&#x884C;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x5C06;&#x4EA7;&#x751F;&#x4E0B;&#x5217;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">The maximum value of <span class="hljs-keyword">float</span> = <span class="hljs-number">3.4028234664e+38</span>
+The minimum value of <span class="hljs-keyword">float</span> = <span class="hljs-number">1.1754943508e-38</span>
+The number of digits in the number = <span class="hljs-number">7.2996655210e-312</span>
+</code></pre>
+<div id="gitalk-container"></div> 
+
+<p><footer class="page-footer"><span class="copyright">&#x8F6C;&#x8F7D;&#x6CE8;&#x660E;&#x51FA;&#x5904; &#xA9; Zander Zhao All Right Reserved; Powered By Gitbook</span><span class="footer-modification"><span id="busuanzi_container_page_pv">&#x672C;&#x6587;&#x603B;&#x9605;&#x8BFB;&#x91CF;<span id="busuanzi_value_page_pv"></span>&#x6B21;</span>; &#x6700;&#x65B0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-01-17 14:44:12
+</span></footer><script async src="//cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/busuanzi.pure.mini.js"></script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../errno.h/ERANGE_Range_Error.html" class="navigation navigation-prev " aria-label="Previous page: ERANGE Range Error">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../limits.h/" class="navigation navigation-next " aria-label="Next page: limits.h">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"float.h","level":"1.8.5","depth":2,"next":{"title":"limits.h","level":"1.8.6","depth":2,"path":"include/limits.h/README.md","ref":"include/limits.h/README.md","articles":[]},"previous":{"title":"ERANGE Range Error","level":"1.8.4.3","depth":3,"path":"include/errno.h/ERANGE_Range_Error.md","ref":"include/errno.h/ERANGE_Range_Error.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","theme-simple@git+https://github.com/plugins-zander/gitbook-plugin-theme-simple.git","search-pro@git+https://github.com/plugins-zander/gitbook-plugin-search-pro.git","katex@git+https://github.com/plugins-zander/gitbook-plugin-katex.git","splitter@git+https://github.com/plugins-zander/gitbook-plugin-splitter.git","mygitalk@git+https://github.com/plugins-zander/gitbook-plugin-mygitalk.git","edit-link@git+https://github.com/plugins-zander/gitbook-plugin-edit-link.git","donate@git+https://github.com/plugins-zander/gitbook-plugin-donate.git","sitemap-general@git+https://github.com/plugins-zander/gitbook-plugin-sitemap-general.git","tbfed-pagefooter@git+https://github.com/plugins-zander/gitbook-plugin-tbfed-pagefooter.git","todo@git+https://github.com/plugins-zander/gitbook-plugin-todo.git","chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git","copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git","page-toc@git+https://github.com/plugins-zander/gitbook-plugin-page-toc.git"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"转载注明出处 &copy Zander Zhao","modify_bszlabel":"<span id=\"busuanzi_container_page_pv\">本文总阅读量<span id=\"busuanzi_value_page_pv\"></span>次</span>","modify_label":"最新修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"todo":{},"splitter":{},"search-pro":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/book/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/book/wechat.jpg","wechatText":"微信打赏"},"sitemap-general":{"prefix":"https://zlogs.net/learn-c/"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-simple":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"364365ceb2659b383d73","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["zanderzhao"],"createIssueManually":false,"distractionFreeMode":false,"repo":"talk","owner":"zanderzhao","enableHotKey":true,"clientSecret":"447ef6648e9dfffe2e2a65c34c8ead1dd4b7af54","pagerDirection":"last","labels":["Gitalk"]},"edit-link":{"label":"编辑本页","base":"https://github.com/ZanderZhao/learn-c/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Zander Zhao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"learn-c","language":"zh-hans","links":{"sidebar":{"# 博客":"https://zlogs.net","# 总目录":"https://zlogs.net/learn-books"}},"gitbook":"3.2.3","description":"learn-c - Zander's Learn Book"},"file":{"path":"include/float.h/README.md","mtime":"2020-01-17T14:44:12.113Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T14:45:37.303Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
